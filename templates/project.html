@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block contain %}
+    <div class="project">
+        <div class="project-container">
+            {% for object in projectdata %}
+            <div>
+                <h4>{{object.project_name}}</h4>
+                <button class="btnproject"><a href="{{object.project_link}}">click</a></button>
+            </div>
+            {% endfor %}
+       </div>
+    </div>
+    {% endblock  %}
+    

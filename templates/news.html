@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block contain %}
+    <div class="news">
+        <div class="news-container">
+            <div class="img-news"><img src="/media/{{key.news_image}}"/></div>
+            <div class="desc-news">
+                <h2>{{key.news_title}}</h2>
+                <p>{{key.news_desc | safe}}</p>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

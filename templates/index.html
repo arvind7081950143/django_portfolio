@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+    {% block contain %}
+    <marquee onmouseover="stop()" onmouseout="start()">
+        {% for object in newsdata  %}
+        <a href="/news/{{object.news_slug}}">{{object.news_title}}</a> &nbsp;&nbsp;
+        {% endfor %}
+    </marquee>
+    <div class="home" id="hom">
+        <h2>Welcome to our <br><span style="color: aquamarine;">Portfolio website </span>Aap</h2>
+        <button class="btnlogin">Explore me</button>
+    </div>
+    <div class="about" id="about">
+        <h2>about-us</h2>
+        <article class="contain">
+            <div class="about-img">
+                <img src="/static/img/profile1.jpg" style="object-fit: cover;" alt="">
+            </div>
+            <div class="aboutdata">
+                <h3 style="padding: 5px; color: aliceblue;">Hellow,<br>I,am <span style="color: aqua; border-bottom: 3px solid black;">Arvind</span>kumar</h3>
+                <p style="padding: 5px; color: aliceblue;">
+                I'Develop user-facing features using HTML, CSS,
+                and JavaScript. Implement responsive design
+                principles to ensure compatibility across multiple
+                devices. Create and maintain code for front-end and backend
+                components to improve usability.
+                I am full stack webdevoloper and i can handle
+                both problem frentend and backend 
+                
+                
+                </p>
+            </div>
+        </article>
+    </div>
+    <div class="service" id="service">
+        <h2>skills</h2>
+        <div class="container">
+            {% for image in skillimg %}
+            <div>
+                <img src="/media/{{image.skill_img}}"/>
+            </div>
+            {% endfor %} 
+        </div>
+        
+    </div>
+    
+{% endblock %}

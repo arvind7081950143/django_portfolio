@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+    {% block contain %}
+    <div class="servicehave">
+      <form method='get'>
+        <input type="text" name="servicename"/>
+        <button type="submit" class="search">search</button>
+      </form>
+        <div class="servicecontainer">
+          <h3 style="text-align: center;"><span>service</span>  provide</h3>
+          {% for object in service %}
+              <div>
+                <h4>{{object.service_title}}</h4>
+                <p>
+                  {{object.service_desc}}
+                </p>
+              </div>
+              {% empty %}
+              <h4>No data found</h4>
+              {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+    
